@@ -1,0 +1,17 @@
+<section class="tab" ng-controller="StoreController as sController">
+    <ul class="nav nav-pills">
+        <li ng-class="{active:sController.isCurrentTab(1)}">
+            <a id="aa" href ng-click="sController.setCurrentTab(1)" >Tab1</a>
+        </li>
+        <li ng-class="{active:sController.isCurrentTab(2)}">
+            <a id="bb" href ng-click="sController.setCurrentTab(2)" >Tab2</a>
+        </li>
+        {{sController.tab}}
+    </ul>
+    <div click-msg2 ng-show="sController.isCurrentTab(1)">
+        <a>HI! I'm tab 1</a>
+        </div>
+    <div  ng-show="sController.isCurrentTab(2)">
+        <a>HI! I'm tab 2</a>
+    </div>
+</section>

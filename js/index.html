@@ -3,11 +3,27 @@
 <head lang="en">
     <script type="text/javascript" src="angular.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script src="../directives/utilDirective.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <meta charset="UTF-8">
     <title>asfd</title>
 </head>
 <body>
-<p>{{"hi" + " Dan!"}}</p>
+<div class="row">
+<p >{{"ghidsf" + " Dan!"}}</p></div>
+<div ng-controller="StoreController as store" >
+    <div ng-repeat="product in store.products | orderBy: '-price'">
+        product name: {{product.name}}
+        <em class="col-lg-pull-6"> product type: {{product.category}}
+            <span > Price: {{product.price | currency}}</span>
+
+            <button  click-msg2="aaa" class="btn-primary" >Click ME Yo!</button>
+        </em>
+
+
+        </div>
+    </div>
+
+<bla></bla>
 </body>
 </html>
